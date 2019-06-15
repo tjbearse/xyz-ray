@@ -1,0 +1,427 @@
+fileFormatVersion: 2
+guid: 5d807ecce506c92ed9dad7859fb90829
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5066004710124089531
+    second: organs_0
+  - first:
+      213: 6892191342197407057
+    second: organs_1
+  - first:
+      213: -6720224011178349508
+    second: organs_2
+  - first:
+      213: -625591121955760820
+    second: organs_3
+  - first:
+      213: -6737149090861693291
+    second: organs_4
+  - first:
+      213: 7485612899836925987
+    second: organs_5
+  - first:
+      213: 3699106717712924953
+    second: organs_6
+  - first:
+      213: 2428093595767542718
+    second: organs_7
+  - first:
+      213: -8520541206428792307
+    second: organs_8
+  - first:
+      213: -5369759252198281338
+    second: organs_9
+  - first:
+      213: -4913399103118036799
+    second: organs_10
+  - first:
+      213: -1135363350126266078
+    second: organs_11
+  - first:
+      213: -3726087616319804654
+    second: organs_12
+  - first:
+      213: 1921881428919597889
+    second: organs_13
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: organs_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 653
+        width: 233
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3760806d20b5b16b692665b3abe6e7ae
+      internalID: -5066004710124089531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: organs_1
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 757
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816d3dc7bc15c701085c0b8925362a18
+      internalID: 6892191342197407057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: organs_2
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 755
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86603236ec1f3219facb7af8a36ed8d1
+      internalID: -6720224011178349508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: organs_3
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 689
+        width: 80
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3b6e6663395c8e58e033a5fcf8df82
+      internalID: -625591121955760820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: organs_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 485
+        width: 79
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea65db718a1d4fbb8c68cd7a471f89b
+      internalID: -6737149090861693291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: organs_5
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 472
+        width: 150
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f889dd9672e139eba8393008701f7f14
+      internalID: 7485612899836925987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: organs_6
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 424
+        width: 115
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6500b64cadc5f22e698182e7d51a9a08
+      internalID: 3699106717712924953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: organs_7
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 438
+        width: 117
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea86c5c137e2d048c8c79dab34187b77
+      internalID: 2428093595767542718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: organs_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 262
+        width: 94
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e81588cc752c564ae7a841f285cffd
+      internalID: -8520541206428792307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: organs_9
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 355
+        width: 63
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544f9dbd5c4a2dca5a69cebe7169ce6d
+      internalID: -5369759252198281338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: organs_10
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 288
+        width: 108
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b2382ca4b4e4bf8b5be947259c076c
+      internalID: -4913399103118036799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: organs_11
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 288
+        width: 188
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7bb27d1387bfe49391ef55133085255
+      internalID: -1135363350126266078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: organs_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 232
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b8740ddc3f9eb43183b70edaa49a57a
+      internalID: -3726087616319804654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: organs_13
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 0
+        width: 308
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909b569566a82e990afbc9a7d9b80190
+      internalID: 1921881428919597889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

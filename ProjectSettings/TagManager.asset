@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - metaphysical
+  - lenses
+  - suit
+  - skin
+  - skeleton
+  - organs
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Suit Back
+    uniqueID: 2438101823
+    locked: 0
+  - name: Back skeleton
+    uniqueID: 482787089
+    locked: 0
+  - name: Organs
+    uniqueID: 537800015
+    locked: 0
+  - name: Front skeleton
+    uniqueID: 1116138395
+    locked: 0
+  - name: Skin
+    uniqueID: 2011171555
+    locked: 0
+  - name: Clothes
+    uniqueID: 457644993
+    locked: 0
+  - name: Suit
+    uniqueID: 180288047
+    locked: 0
+  - name: UI+Lens
+    uniqueID: 3887512677
+    locked: 0
