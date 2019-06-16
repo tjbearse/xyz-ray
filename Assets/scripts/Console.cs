@@ -11,25 +11,34 @@ public class Console : MonoBehaviour {
 	private int lines = 0;
 
 	void Start () {
-		this.textBuffer = new Queue<char>();
+		if(this.textBuffer == null) {
+			this.textBuffer = new Queue<char>();
+		}
 		this.text = this.GetComponent<Text>();
 	}
 
 	public void SendText(string txt) {
-		this.lines++;
-		foreach (char c in txt) {
-			this.textBuffer.Enqueue(c);
+		if(this.textBuffer == null) {
+			this.textBuffer = new Queue<char>();
 		}
 		this.textBuffer.Enqueue('\n');
-		if (this.lines > this.maxLines) {
-			int i = this.text.text.IndexOf('\n');
-			this.text.text = this.text.text.Substring(i+1);
+		foreach (char c in txt) {
+			this.textBuffer.Enqueue(c);
 		}
 	}
 
 	void Update() {
 		if (this.textBuffer.Count > 0) {
-			this.text.text += this.textBuffer.Dequeue();
+			var top = this.textBuffer.Dequeue();
+			this.text.text += top;
+			if (top == '\n') {
+				this.lines++;
+			}
+			while (this.lines > this.maxLines) {
+				int i = this.text.text.IndexOf('\n');
+				this.text.text = this.text.text.Substring(i+1);
+				this.lines--;
+			}
 		}
 	}
 }

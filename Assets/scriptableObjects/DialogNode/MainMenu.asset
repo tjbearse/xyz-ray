@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: MainMenu
+  m_EditorClassIdentifier: Assembly-CSharp::MenuDialogNode
+  startText: Artemis Main Menu
+  options:
+  - prompt: Contact Houston
+    response: 'Sending signal 4.56e-4 light years.
+
+      ...
+
+      ...
+
+      ...
+
+      Complete
+
+      Please
+      wait 3h 56m 7s for signal to reach Earth.
+
+'
+    next: {fileID: 0}
+  - prompt: Open airlock
+    response: Authentication Required
+    next: {fileID: 0}
+  - prompt: Reset Password
+    response: 
+    next: {fileID: 11400000, guid: cf6f4c8d2c2ceb9e8ac9108f096e948d, type: 2}

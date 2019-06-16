@@ -2,44 +2,48 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Prompt : MonoBehaviour {
 	public InputField inputText;
 	public Console prompt;
-	public List<SecurityQuestion> questions;
+	public BaseDialogNode dialogNode;
+	public NodePresented onNodePresented;
 
-	public void Start() {
-		if (this.questions == null) {
-			this.questions = new List<SecurityQuestion>();
+	public void OnEnable() {
+		if (this.dialogNode == null) {
+			Debug.LogError("started prompt w/o dialog", this);
 		}
-		if (this.questions.Count > 0) {
-			this.prompt.SendText(this.questions[0].question);
-		}
+		this.ProcessNode();
+        this.inputText.ActivateInputField();
 	}
 
-	private void SendCurrent() {
-		if (this.questions.Count > 0) {
-			this.prompt.SendText(this.questions[0].question);
-		}
+	private IEnumerator ProcessNodeDelay() {
+		yield return new WaitForSeconds(1);
+		this.ProcessNode();
+	}
+
+	private void ProcessNode() {
+		this.onNodePresented.Invoke(this.dialogNode);
+		this.prompt.SendText("\n" + this.dialogNode.StartText());
+        this.inputText.ActivateInputField();
 	}
 
 	public void RelayMessage() {
 		if(Input.GetButtonDown("Submit")){
 			string text = inputText.text;
 			inputText.text = "";
-			if (this.questions.Count == 0) {
-				return;
+			(string response, BaseDialogNode next) = this.dialogNode.RecieveText(text);
+			if (response != "") {
+				this.prompt.SendText(response);
 			}
-			if (text == this.questions[0].answer) {
-				this.prompt.SendText(string.Format("{0} is correct!", text));
-				this.questions.RemoveAt(0);
-			} else {
-				this.prompt.SendText(string.Format("{0} is incorrect", text));
+			if (next != null) {
+				this.dialogNode = next;
 			}
-			this.SendCurrent();
+
+			StartCoroutine(this.ProcessNodeDelay());
 		}
 	}
-
-	// TODO make a text buffer of lines
 }
-
+[System.Serializable]
+public class NodePresented: UnityEvent<BaseDialogNode> {}

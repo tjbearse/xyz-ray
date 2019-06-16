@@ -10,10 +10,6 @@ public class RayClick : MonoBehaviour {
 	private float rayStart = -2;
 	private float rayEnd = 5;
    
-	void Start () {
-		this.hits = new RaycastHit2D[10];
-	}
-   
 	void Update () {
 		if (Input.GetMouseButtonDown(0)) {
 			var top = this.GetTopCollider();

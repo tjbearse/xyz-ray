@@ -18,8 +18,10 @@ public class MultipleClickable : BaseClickable {
 	IEnumerator IterateWithDelay()
 	{
 		foreach(var c in this.clickables) {
-			c.Click();
-			yield return new WaitForSeconds(this.delay);
+			if (c.enabled) {
+				c.Click();
+				yield return new WaitForSeconds(this.delay);
+			}
 		}
 	}
 }
