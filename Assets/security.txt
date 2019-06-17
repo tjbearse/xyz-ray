@@ -60,9 +60,12 @@ Favorite food
 
 Morgan Gallagher is an astronaut. He got locked out of the space shuttle. You are an alien life form trying to help by resetting his password for him
 Harry Houdini
-Morgan was born in Austin Texas.
+Morgan was born in Austin Texas in 2008.
 He went to school at the University of Washington to become a doctor but fell in love with astrobiology.
 After college
+
+Married Melonie married Jun 8 2030
+It is now Jun 16 2047
 
 
 # need to triple / double give clues
@@ -72,11 +75,12 @@ Metaphysical: emotions, trans time, alternate universes
 
 > Suit
 >> Physical
-Name - on suit (M. Gallagher) Subject's name is M. Gallagher.
-Country of origin - Subject is an employee of NASA (weird rank)
+X Name - on suit (M. Gallagher) Subject's name is M. Gallagher.
+X Country of origin - Subject is an employee of NASA (weird rank)
 Employeer - Subject is a denizen of Earth, in the United States of America where 100% of inhabitants live without glurp
-Why outside - Camera - Recent footage indicates the subject is unable to reenter the shuttle.
-Help sign
+X Why outside - Camera - Recent footage indicates the subject is unable to reenter the shuttle.
+X Help sign
+X Wrench
 
 Oxygen content
 >> Metaphysical
@@ -85,15 +89,19 @@ Oxygen content
 
 > Clothes (skip?)
 >> Physical
-  Pen
-  watch
-  socks don't match
-
-
+  X Pen - for Mo, happy 6th anniversarry June 8th, 2036
+  X watch - current date
+  X socks don't match
+  X zipper success rate
 > Skin
->> Physical
-confirmed male it's cold in space (blur)
+scar - reenacting childhood hero
+sun exposure - where they grew up
+black eye - 6th grade fight (percentage on kids name and school)
+bags under eyes from children
+blur junk - confirmed male it's cold in space
 toe stub count
+hair style the same since X wedding anniversarry
+
 >> Metaphysical
 (senses, 4d shapes, abstract patterns)
 see
@@ -104,16 +112,20 @@ taste
 
 > Skeleton
 >> Physical
-how long Morgan has been in space - femur length
+how long Morgan has been in space - bone thickness
 Date of birth - Femur length -> how old is Morgan
 teeth yellowing due to coffee consuption, brand of coffee
+Humorous joke
+broken bone
+
 >> Metaphysical
 (timeline mandala / sugar skull)
-Humorous joke
 
 
 > Organs
 >> Physical
 Favorite food - Subject has eaten 734 tacos, Subject has completed 670 situps
+Liver damage at university during the week preceeding the Washington vs Washington State collegiate football game.
+
 >> Metaphysical
 (emotions & symbology)

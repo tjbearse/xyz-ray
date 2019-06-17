@@ -61,10 +61,22 @@ public class DynamicMaskRayClick : MonoBehaviour {
 				r.maskInteraction != SpriteMaskInteraction.VisibleOutsideMask
 				|| !e.IsFiltered(masks)
 			) {
+				// greater than means higher
 				if (best == null || (e > best)) {
+					/*
+					if (best != null) {
+						Debug.Log(string.Format("{0} ({1}) is lower than {2} ({3})", collider.gameObject, best.layer, r.gameObject, e.layer));
+					} else {
+						Debug.Log(string.Format("only {0} ({1})", r.gameObject, e.layer));
+					}
+					*/
 					best = e;
 					collider = r.GetComponent<Collider2D>();
+				} else {
+					// Debug.Log(string.Format("{0} ({1}) is higher than {2} ({3})", collider.gameObject, best.layer, r.gameObject, e.layer));
 				}
+			} else {
+				// Debug.Log(string.Format("{0} ({1}) still, filtered {2} ({3})", collider.gameObject, best.layer, r.gameObject, e.layer));
 			}
 		}
 		return collider;

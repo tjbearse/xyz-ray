@@ -17,7 +17,7 @@ public class SingleAnswer : BaseDialogNode {
 	}
 
 	override public (string response, BaseDialogNode next) RecieveText(string answer) {
-		if (answer == this.answer) {
+		if (Regex.IsMatch(this.answer, answer, RegexOptions.IgnoreCase)) {
 			return (response: this.goodResponse, next: this.next);
 		} else {
 			return (response: this.badResponse, next: this);
