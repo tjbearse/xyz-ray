@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b5ea195631bd6162846539d0c187024, type: 3}
+  m_Name: Additional Questions
+  m_EditorClassIdentifier: 
+  startText: 'Unusual activity has been detected on your acount. Additional security
+    questions will be required.
+
+
+    Press enter to continue'
+  options:
+  - regex: .*
+    response: 
+    next: {fileID: 11400000, guid: 30f530021f52fa73ebc1536846552e4c, type: 2}

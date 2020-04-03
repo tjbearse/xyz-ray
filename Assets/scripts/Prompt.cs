@@ -9,6 +9,16 @@ public class Prompt : MonoBehaviour {
 	public Console prompt;
 	public BaseDialogNode dialogNode;
 	public NodePresented onNodePresented;
+	public NodeAnswered onNodeAnswered;
+
+	public void Awake() {
+		if (this.onNodePresented == null) {
+			this.onNodePresented = new NodePresented();
+		}
+		if (this.onNodeAnswered == null) {
+			this.onNodeAnswered = new NodeAnswered();
+		}
+	}
 
 	public void OnEnable() {
 		if (this.dialogNode == null) {
@@ -19,7 +29,7 @@ public class Prompt : MonoBehaviour {
 	}
 
 	private IEnumerator ProcessNodeDelay() {
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(.5f);
 		this.ProcessNode();
 	}
 
@@ -34,6 +44,7 @@ public class Prompt : MonoBehaviour {
 			string text = inputText.text;
 			inputText.text = "";
 			(string response, BaseDialogNode next) = this.dialogNode.RecieveText(text);
+			this.onNodeAnswered.Invoke(this.dialogNode, text);
 			if (response != "") {
 				this.prompt.SendText(response);
 			}
@@ -47,3 +58,4 @@ public class Prompt : MonoBehaviour {
 }
 [System.Serializable]
 public class NodePresented: UnityEvent<BaseDialogNode> {}
+public class NodeAnswered: UnityEvent<BaseDialogNode, string> {}

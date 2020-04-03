@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c64aa42ae64f3c578bc6317a4c36e7e, type: 3}
+  m_Name: Menu
+  m_EditorClassIdentifier: 
+  startText: Artemis external control interface. Please select an option
+  options:
+  - prompt: Contact Houston
+    response: 
+    next: {fileID: 11400000, guid: ac5e5a8ee1fc7ca81946faad9db10b04, type: 2}
+  - prompt: Open Airlock
+    response: 
+    next: {fileID: 11400000, guid: d9bf50c7141e6d2f3928510950b89087, type: 2}
+  - prompt: Reset Password
+    response: 
+    next: {fileID: 11400000, guid: cf6f4c8d2c2ceb9e8ac9108f096e948d, type: 2}

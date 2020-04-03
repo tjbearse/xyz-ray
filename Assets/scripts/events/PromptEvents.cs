@@ -7,21 +7,35 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Prompt))]
 public class PromptEvents : MonoBehaviour {
 	public List<NodeEventEntry> eventList;
-	public Dictionary<BaseDialogNode, UnityEvent> eventMap;
-    void Start() {
+	public Dictionary<BaseDialogNode, UnityEvent> exposeEventMap;
+
+	public List<NodeAnswerEventEntry> answerEventList;
+	public Dictionary<BaseDialogNode, NodeAnswerEventEntry.AnswerEvent> answerEventMap;
+
+	void Start() {
 		var p = this.GetComponent<Prompt>();
 		p.onNodePresented.AddListener(ReactToNode);
-		this.eventMap = new Dictionary<BaseDialogNode, UnityEvent>();
+		p.onNodeAnswered.AddListener(ReactToNodeAnswer);
+
+		this.exposeEventMap = new Dictionary<BaseDialogNode, UnityEvent>();
+		this.answerEventMap = new Dictionary<BaseDialogNode, NodeAnswerEventEntry.AnswerEvent>();
 
 		foreach(var t in this.eventList) {
-			this.eventMap[t.node] = t.e;
+			this.exposeEventMap[t.node] = t.e;
 		}
-    }
+		foreach(var t in this.answerEventList) {
+			this.answerEventMap[t.node] = t.e;
+		}
+	}
 
 	void ReactToNode(BaseDialogNode n) {
-		Debug.Log("reacting to a node");
-		if (this.eventMap.ContainsKey(n)) {
-			this.eventMap[n].Invoke();
+		if (this.exposeEventMap.ContainsKey(n)) {
+			this.exposeEventMap[n].Invoke();
+		}
+	}
+	void ReactToNodeAnswer(BaseDialogNode n, string text) {
+		if (this.answerEventMap.ContainsKey(n)) {
+			this.answerEventMap[n].Invoke(text);
 		}
 	}
 }
@@ -30,4 +44,12 @@ public class PromptEvents : MonoBehaviour {
 public class NodeEventEntry {
 	public BaseDialogNode node;
 	public UnityEvent e;
+}
+
+[Serializable]
+public class NodeAnswerEventEntry {
+	public BaseDialogNode node;
+	public AnswerEvent e;
+	[Serializable]
+	public class AnswerEvent : UnityEvent<string> {};
 }

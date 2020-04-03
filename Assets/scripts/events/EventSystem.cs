@@ -6,11 +6,10 @@ using UnityEngine.Events;
 
 
 public class EventSystem : MonoBehaviour {
-	void Start() {
-		StartCoroutine(this.gameStart.InvokeWithDelay(.2f));
-	}
-
 	public OneTimeEvent gameStart;
+	public void StartGame() {
+		this.gameStart.Invoke();
+	}
 
 	public void ActivateEmergencySystem() {
 		StartCoroutine(this.activateEmergencySystem.InvokeWithDelay(3));
@@ -19,6 +18,9 @@ public class EventSystem : MonoBehaviour {
 
 	public void ActivateInvestigation() => this.activateInvestigation.Invoke();
 	public OneTimeEvent activateInvestigation;
+
+	public OneTimeEvent gameOver;
+	public void ActivateGameOver() => this.gameOver.Invoke();
 
 }
 

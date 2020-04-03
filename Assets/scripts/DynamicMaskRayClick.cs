@@ -6,25 +6,37 @@ using System.Linq;
 public class DynamicMaskRayClick : MonoBehaviour {
 	public LayerMask baseLayerMask = 0;
 	public LayerMask lensLayerMask = 0;
+	private RaycastHit2D[] resultBuffer; // be careful with this, it is used twice
 	private float rayStart = -2;
 	private float rayEnd = 5;
+	public int framesPerRay = 10;
+	private int frameMarker = 0;
+
+	void Start () {
+		resultBuffer = new RaycastHit2D[30];
+	}
    
 	void Update () {
+		this.frameMarker++;
 		if (Input.GetMouseButtonDown(0)) {
-			var top = this.GetTopCollider();
+			var top = this.GetTopClickable();
 			if (top != null) {
-				var clickable = top.GetComponent<BaseClickable>();
-				if (clickable != null) {
-					clickable.Click();
-				}
+				top.Click();
+				top.Highlight();
 			}
+		} else if (this.frameMarker >= this.framesPerRay) {
+			var top = this.GetTopClickable();
+			if (top != null) {
+				top.Highlight();
+			}
+			this.frameMarker = 0;
 		}
 	}
 
 	private List<SpriteMask> GetMasks(Vector3 clickPos) {
 		var hits = this.LinecastAll(clickPos, this.lensLayerMask);
 
-		var spMasks = new List<SpriteMask>(hits.Length);
+		var spMasks = new List<SpriteMask>(hits.Count());
 		foreach(var hit in hits) {
 			var spMask = hit.transform.GetComponent<SpriteMask>();
 			if (spMask) {
@@ -34,12 +46,14 @@ public class DynamicMaskRayClick : MonoBehaviour {
 		return spMasks;
 	}
 
-	private RaycastHit2D[] LinecastAll(Vector3 pos, LayerMask mask) {
-		return Physics2D.LinecastAll(
+	private IEnumerable<RaycastHit2D> LinecastAll(Vector3 pos, LayerMask mask) {
+		var nHits = Physics2D.LinecastNonAlloc(
 			new Vector3(pos.x, pos.y, rayStart),
 			new Vector3(pos.x, pos.y, rayEnd),
+			this.resultBuffer,
 			mask
 		);
+		return this.resultBuffer.Take(nHits);
 	}
 
 	// don't really need to return collider
@@ -47,6 +61,7 @@ public class DynamicMaskRayClick : MonoBehaviour {
 		Vector3 clickedPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		var masks = this.GetMasks(clickedPos);
 		var hits = this.LinecastAll(clickedPos, this.baseLayerMask);
+		// Debug.Log(string.Format("{0} hits", hits.Count()));
 
 		var spriteRenderers = hits.Select(h => h.transform.GetComponent<SpriteRenderer>());
 
@@ -65,7 +80,7 @@ public class DynamicMaskRayClick : MonoBehaviour {
 				if (best == null || (e > best)) {
 					/*
 					if (best != null) {
-						Debug.Log(string.Format("{0} ({1}) is lower than {2} ({3})", collider.gameObject, best.layer, r.gameObject, e.layer));
+						// Debug.Log(string.Format("{0} ({1}) is lower than {2} ({3})", collider.gameObject, best.layer, r.gameObject, e.layer));
 					} else {
 						Debug.Log(string.Format("only {0} ({1})", r.gameObject, e.layer));
 					}
@@ -76,10 +91,19 @@ public class DynamicMaskRayClick : MonoBehaviour {
 					// Debug.Log(string.Format("{0} ({1}) is higher than {2} ({3})", collider.gameObject, best.layer, r.gameObject, e.layer));
 				}
 			} else {
-				// Debug.Log(string.Format("{0} ({1}) still, filtered {2} ({3})", collider.gameObject, best.layer, r.gameObject, e.layer));
+				// Debug.Log(string.Format("filtered {0} ({1})", r.gameObject, e.layer));
 			}
 		}
 		return collider;
+	}
+
+	private BaseClickable GetTopClickable() {
+		var top = this.GetTopCollider();
+		if (top != null) {
+			var clickable = top.GetComponent<BaseClickable>();
+			return clickable;
+		}
+		return null;
 	}
 
 	public class SpriteEntry {

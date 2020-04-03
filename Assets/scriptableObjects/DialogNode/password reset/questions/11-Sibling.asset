@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77933e1d57b758403a118163d5fd0c87, type: 3}
+  m_Name: 11-Sibling
+  m_EditorClassIdentifier: 
+  startText: What is your oldest sibling's middle name?
+  answer: Marie
+  goodResponse: 
+  badResponse: 
+  next: {fileID: 11400000, guid: 41cded0d6f959a0e09a178865d8d068b, type: 2}
