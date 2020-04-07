@@ -39,6 +39,10 @@ public class Prompt : MonoBehaviour {
         this.inputText.ActivateInputField();
 	}
 
+	private void Update() {
+		this.inputText.ActivateInputField();
+	}
+
 	public void RelayMessage() {
 		if(Input.GetButtonDown("Submit")){
 			string text = inputText.text;

@@ -7,19 +7,24 @@ using UnityEngine.Events;
 
 public class EventSystem : MonoBehaviour {
 	public OneTimeEvent gameStart;
+	[ContextMenu("Start Game")]
 	public void StartGame() {
 		this.gameStart.Invoke();
 	}
 
+	[ContextMenu("Emergency System")]
 	public void ActivateEmergencySystem() {
 		StartCoroutine(this.activateEmergencySystem.InvokeWithDelay(3));
 	}
 	public OneTimeEvent activateEmergencySystem;
 
+	[ContextMenu("Investigation")]
 	public void ActivateInvestigation() => this.activateInvestigation.Invoke();
+
 	public OneTimeEvent activateInvestigation;
 
 	public OneTimeEvent gameOver;
+	[ContextMenu("Game Over")]
 	public void ActivateGameOver() => this.gameOver.Invoke();
 
 }
